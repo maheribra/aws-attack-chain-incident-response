@@ -1,0 +1,13 @@
+AWS ATTACK CHAIN LAB - SIMULATED SENSITIVE DATA
+
+Classification: CONFIDENTIAL - SIMULATION ONLY
+
+Customer: Example Corporation
+Project: Internal Cloud Migration
+Environment: Production-Simulation
+
+This file contains no real credentials, secrets, personal data, or production information.
+
+Purpose:
+This file is intentionally placed in a deliberately misconfigured S3 bucket
+as part of an authorized AWS security incident-response laboratory.
