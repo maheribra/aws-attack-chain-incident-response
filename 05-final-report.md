@@ -70,7 +70,7 @@ The compromised access path was contained through access revocation and session 
 
 Post-containment testing confirmed that access using the revoked compromised session resulted in `Access Denied`.
 
-This demonstrated that the containment controls successfully prevented continued use of the compromised temporary credentials.
+This demonstrated that the containment control successfully blocked the compromised session while the explicit deny policy was active. The still-valid STS session could regain access after the policy was removed, demonstrating that the containment mechanism was temporary and dependent on the deny policy remaining in place.
 
 ## 7. Remediation
 
