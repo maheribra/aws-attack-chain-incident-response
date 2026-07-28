@@ -35,7 +35,7 @@ Attacker IAM User
 - S3 access to simulated confidential data
 - Successful role assumption using the attacker identity
 - CloudTrail evidence of the attack chain
-- Successful containment through access-key deactivation and session revocation
+- Successful containment through attacker access-key deactivation and explicit session revocation, with post-revocation access testing
 
 ## Incident Response Lifecycle
 
