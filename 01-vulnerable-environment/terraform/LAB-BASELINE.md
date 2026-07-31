@@ -17,7 +17,7 @@ This document records the initial security baseline of the deliberately vulnerab
 2. Over-permissioned IAM role with broad S3 permissions
 3. Vulnerable S3 bucket containing simulated sensitive data
 4. CloudTrail logging enabled for forensic investigation
-5. GuardDuty and Security Hub configured for detection
+5. GuardDuty and Security Hub detection services were not enabled in the lab account; CloudTrail was used as the primary forensic evidence source.
 
 ## IAM Vulnerability
 
