@@ -51,4 +51,4 @@ Potential access to sensitive S3 data
 - [x] CloudTrail evidence captured
 - [x] CloudTrail forensic evidence validated
 - [x] GuardDuty and Security Hub detection gap documented
-- [ ] Remediation completed
+- [x] Remediation completed
