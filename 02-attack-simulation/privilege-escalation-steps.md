@@ -47,7 +47,8 @@ Potential access to sensitive S3 data
 - [x] Vulnerable role identified
 - [x] Inline policy enumerated
 - [x] Full S3 permissions confirmed
-- [ ] Sensitive data access demonstrated
-- [ ] CloudTrail evidence captured
-- [ ] GuardDuty/Security Hub detection validated
+- [x] Sensitive data access demonstrated
+- [x] CloudTrail evidence captured
+- [x] CloudTrail forensic evidence validated
+- [x] GuardDuty and Security Hub detection gap documented
 - [ ] Remediation completed
