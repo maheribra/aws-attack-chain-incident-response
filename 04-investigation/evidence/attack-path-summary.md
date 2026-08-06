@@ -39,7 +39,7 @@
 - 2026-07-28T11:48:39Z — Attacker assumed `aws-attack-chain-lab-vulnerable-role`.
 - 2026-07-28T11:50:57Z — Assumed role accessed `confidential/simulated-sensitive-data.txt` from the sensitive S3 bucket.
 - CloudTrail confirms the S3 access was performed by the assumed role session:
-  `arn:aws:sts::275023965626:assumed-role/aws-attack-chain-lab-vulnerable-role/botocore-session-1785239315`
+  `arn:aws:sts::<ACCOUNT_ID>:assumed-role/aws-attack-chain-lab-vulnerable-role/botocore-session-1785239315`
 
 ## Conclusion
 

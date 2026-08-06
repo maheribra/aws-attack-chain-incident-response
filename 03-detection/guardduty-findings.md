@@ -6,7 +6,7 @@ This document records the GuardDuty verification performed for the AWS Attack Ch
 
 ## Verification Scope
 
-The simulated attack was executed in AWS account `275023965626`.
+The simulated attack was executed in AWS account `<ACCOUNT_ID>`.
 
 The attack chain included:
 
@@ -28,7 +28,7 @@ The verification returned:
 DetectorIds: []
 ```
 
-This confirms that no GuardDuty detector was enabled in AWS account `275023965626` at the time of verification.
+This confirms that no GuardDuty detector was enabled in AWS account `<ACCOUNT_ID>` at the time of verification.
 
 ## Detection Result
 

@@ -8,7 +8,7 @@ This document records the authorized AWS attack simulation performed against the
 
 - IAM User: `aws-attack-chain-lab-attacker`
 - Target Role: `aws-attack-chain-lab-vulnerable-role`
-- Account: `275023965626`
+- Account: `<ACCOUNT_ID>`
 
 ## Attack Sequence
 

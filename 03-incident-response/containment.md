@@ -13,8 +13,8 @@ Contain the simulated security incident and prevent further unauthorized access 
 The CloudTrail investigation identified the following identity:
 
 - Role: OrganizationAccountAccessRole
-- Session: botocore-session-1785494057
-- Account: 275023965626
+- Session: botocore-session-demo
+- Account: <ACCOUNT_ID>
 
 The identity was treated as potentially compromised for the purposes of the incident simulation.
 

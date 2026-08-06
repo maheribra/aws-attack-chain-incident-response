@@ -5,7 +5,7 @@
 An authorized attack simulation was conducted against the deliberately vulnerable
 AWS Attack Chain Lab account.
 
-Account ID: 275023965626
+Account ID: <ACCOUNT_ID>
 Region: eu-west-1
 Attacker IAM User: aws-attack-chain-lab-attacker
 Vulnerable IAM Role: aws-attack-chain-lab-vulnerable-role
@@ -48,7 +48,7 @@ Event:
 GetCallerIdentity
 
 Identity:
-arn:aws:iam::275023965626:user/aws-attack-chain-lab-attacker
+arn:aws:iam::<ACCOUNT_ID>:user/aws-attack-chain-lab-attacker
 
 Result:
 Successful
@@ -64,10 +64,10 @@ Event:
 AssumeRole
 
 Source Identity:
-arn:aws:iam::275023965626:user/aws-attack-chain-lab-attacker
+arn:aws:iam::<ACCOUNT_ID>:user/aws-attack-chain-lab-attacker
 
 Target Role:
-arn:aws:iam::275023965626:role/aws-attack-chain-lab-vulnerable-role
+arn:aws:iam::<ACCOUNT_ID>:role/aws-attack-chain-lab-vulnerable-role
 
 Result:
 Successful
@@ -83,7 +83,7 @@ Event:
 GetCallerIdentity
 
 Identity:
-arn:aws:sts::275023965626:assumed-role/aws-attack-chain-lab-vulnerable-role/botocore-session-1785239315
+arn:aws:sts::<ACCOUNT_ID>:assumed-role/aws-attack-chain-lab-vulnerable-role/botocore-session-1785239315
 
 Result:
 Successful
@@ -99,7 +99,7 @@ Event:
 GetObject
 
 Identity:
-arn:aws:sts::275023965626:assumed-role/aws-attack-chain-lab-vulnerable-role/botocore-session-1785239315
+arn:aws:sts::<ACCOUNT_ID>:assumed-role/aws-attack-chain-lab-vulnerable-role/botocore-session-1785239315
 
 S3 Bucket:
 aws-attack-chain-lab-sensitive-a4d694d045bb26b29bc1375294
@@ -171,13 +171,13 @@ Remediation: PENDING
 - Evidence: CloudTrail records confirmed the attacker IAM user assumed the vulnerable role and subsequently accessed the simulated sensitive S3 object.
 
 ### Amazon GuardDuty
-- Status: Not enabled in the attack-chain lab account (275023965626)
+- Status: Not enabled in the attack-chain lab account (<ACCOUNT_ID>)
 - Region checked: eu-west-1
 - Detection of simulated attack: Not available
 - Note: GuardDuty findings retrieved during investigation belonged to a separate account (018134828551) and were excluded from this incident.
 
 ### AWS Security Hub
-- Status: Not subscribed in the attack-chain lab account (275023965626)
+- Status: Not subscribed in the attack-chain lab account (<ACCOUNT_ID>)
 - Region checked: eu-west-1
 - Findings generated for this incident: None
 - Note: Security Hub was not active during the simulated attack.

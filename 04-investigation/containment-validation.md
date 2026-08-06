@@ -14,7 +14,7 @@ Role:
 
 Compromised session:
 
-`arn:aws:sts::275023965626:assumed-role/aws-attack-chain-lab-vulnerable-role/assume-role`
+`arn:aws:sts::<ACCOUNT_ID>:assumed-role/aws-attack-chain-lab-vulnerable-role/assume-role`
 
 ### 2. Containment Applied
 

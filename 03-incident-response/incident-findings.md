@@ -21,7 +21,7 @@ The investigation confirmed that an identity using the OrganizationAccountAccess
 - 2026-07-31T10:48:28Z
 
 **Identity:**
-- arn:aws:sts::275023965626:assumed-role/OrganizationAccountAccessRole/botocore-session-1785494057
+- arn:aws:sts::<ACCOUNT_ID>:assumed-role/OrganizationAccountAccessRole/botocore-session-demo
 
 **Source IP:**
 - 212.129.85.30

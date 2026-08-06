@@ -6,7 +6,7 @@ This document records the initial security baseline of the deliberately vulnerab
 
 ## Environment
 
-- AWS Account: 275023965626
+- AWS Account: <ACCOUNT_ID>
 - Region: eu-west-1
 - Infrastructure: Terraform
 - Purpose: Authorized security incident-response laboratory

@@ -6,7 +6,7 @@ This document records the AWS Security Hub verification performed for the AWS At
 
 ## Verification Scope
 
-The simulated attack was executed in AWS account `275023965626`.
+The simulated attack was executed in AWS account `<ACCOUNT_ID>`.
 
 The attack chain included:
 
@@ -31,7 +31,7 @@ Both operations returned:
 
 ```text
 InvalidAccessException:
-Account 275023965626 is not subscribed to AWS Security Hub
+Account <ACCOUNT_ID> is not subscribed to AWS Security Hub
 ```
 
 This confirms that AWS Security Hub was not enabled or subscribed in the attack-chain lab account.

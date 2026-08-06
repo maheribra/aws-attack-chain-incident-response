@@ -14,7 +14,7 @@ This document reconstructs the simulated attack using CloudTrail evidence.
 - GetObject
 
 **Actor**
-- arn:aws:sts::275023965626:assumed-role/OrganizationAccountAccessRole/botocore-session-1785494057
+- arn:aws:sts::<ACCOUNT_ID>:assumed-role/OrganizationAccountAccessRole/botocore-session-demo
 
 **Source IP**
 - 212.129.85.30

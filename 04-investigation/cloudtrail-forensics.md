@@ -10,7 +10,7 @@ This investigation reviewed AWS CloudTrail management and data events generated 
 
 The attack originated from the IAM user:
 
-`arn:aws:iam::275023965626:user/aws-attack-chain-lab-attacker`
+`arn:aws:iam::<ACCOUNT_ID>:user/aws-attack-chain-lab-attacker`
 
 CloudTrail recorded calls to `GetCallerIdentity` from this identity.
 
@@ -18,7 +18,7 @@ CloudTrail recorded calls to `GetCallerIdentity` from this identity.
 
 The attacker successfully assumed the vulnerable IAM role:
 
-`arn:aws:iam::275023965626:role/aws-attack-chain-lab-vulnerable-role`
+`arn:aws:iam::<ACCOUNT_ID>:role/aws-attack-chain-lab-vulnerable-role`
 
 CloudTrail recorded multiple `AssumeRole` events from the attacker IAM user.
 
@@ -32,7 +32,7 @@ Example:
 
 The successful role assumption created an STS assumed-role session:
 
-`arn:aws:sts::275023965626:assumed-role/aws-attack-chain-lab-vulnerable-role/botocore-session-1785239315`
+`arn:aws:sts::<ACCOUNT_ID>:assumed-role/aws-attack-chain-lab-vulnerable-role/botocore-session-1785239315`
 
 ### 4. Data Access
 
