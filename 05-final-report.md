@@ -45,11 +45,15 @@ No real credentials, secrets, personal data, or production information were invo
 
 ## 4. Detection
 
-The defensive monitoring layer consisted of CloudTrail, GuardDuty, and Security Hub.
+The defensive visibility layer consisted of AWS CloudTrail, with GuardDuty and Security Hub assessed as part of the detection architecture.
 
-CloudTrail provided the primary forensic evidence used to reconstruct the attack sequence. The investigation identified the attacker IAM identity, the assumed vulnerable role, the temporary STS session, and the subsequent S3 data-access event.
+CloudTrail provided the primary confirmed forensic evidence used to reconstruct the attack sequence. The investigation identified the attacker IAM identity, the assumed vulnerable role, the temporary STS session, and the subsequent S3 data-access event.
 
-GuardDuty and Security Hub formed part of the broader detection and security-monitoring architecture.
+GuardDuty was verified in the attack-chain lab account and was not enabled at the time of testing. Therefore, GuardDuty did not generate a finding for the simulated attack.
+
+Security Hub was also verified and the lab account was not subscribed to the service. Therefore, Security Hub did not generate or aggregate findings for the simulated attack.
+
+The project therefore demonstrates a confirmed attack reconstructed through CloudTrail, while explicitly documenting GuardDuty and Security Hub as detection and visibility gaps in the laboratory environment.
 
 ## 5. Investigation
 
@@ -124,22 +128,65 @@ The exercise demonstrated several key security lessons:
 
 ## 12. Evidence
 
-Key project evidence includes:
+The project contains evidence covering the complete attack and incident-response lifecycle.
 
+Environment Deployment
 - `01-vulnerable-environment/terraform/`
+
+Contains the Terraform configuration used to deploy the deliberately vulnerable AWS environment.
+
+Attack Simulation
 - `02-attack-simulation/pacu-session-log.md`
 - `02-attack-simulation/privilege-escalation-steps.md`
+
+Documents the authorized attack simulation, IAM role assumption, privilege-escalation path, and attack execution.
+
+Detection Assessment
 - `03-detection/guardduty-findings.md`
 - `03-detection/securityhub-findings.md`
-- `04-investigation/incident-timeline.md`
+
+Documents the verification of GuardDuty and Security Hub and the identified detection and visibility gaps.
+
+Incident Response
+- `03-incident-response/incident-findings.md`
+- `03-incident-response/incident-timeline.md`
+- `03-incident-response/containment.md`
+- `03-incident-response/remediation.md`
+
+Documents the incident findings, response timeline, containment actions, and remediation process.
+
+Forensic Investigation
 - `04-investigation/cloudtrail-forensics.md`
-- `04-investigation/containment-validation.md`
+- `04-investigation/incident-timeline.md`
 - `04-investigation/attack-chain-diagram.md`
 - `04-investigation/evidence/attack-path-summary.md`
-- `04-investigation/evidence/exfiltration/sensitive-data-recovered-final.txt`
+- `04-investigation/containment-validation.md`
+
+Documents the CloudTrail forensic analysis, reconstructed attack timeline, attack path, attack-chain visualization, and containment validation.
+
+Forensic Evidence
 - `04-investigation/evidence/cloudtrail/`
+
+Contains preserved CloudTrail log evidence used during the forensic investigation.
+
+- `04-investigation/evidence/exfiltration/sensitive-data-recovered-final.txt`
+
+Contains the simulated sensitive-data retrieval evidence from the authorized attack simulation.
+
+Remediation and Security Validation
 - `05-containment-remediation/before-after-prowler-scan.md`
+
+Documents the security validation process and before-and-after remediation assessment using Prowler.
+
+Incident-Response Metrics
 - `metrics.md`
+
+Documents the measurable incident-response and security-validation metrics associated with the exercise.
+
+Final Project Documentation
+- `05-final-report.md`
+
+This report consolidates the attack, investigation, detection assessment, containment, remediation, recovery, validation, findings, metrics, and lessons learned.
 
 ## Conclusion
 

@@ -1,38 +1,33 @@
 # AWS Attack Chain Diagram
 
-```mermaid
-flowchart TD
-    A[Attacker IAM User] --> B[AssumeRole]
-    B --> C[Vulnerable IAM Role]
-    C --> D[Temporary STS Credentials]
-    D --> E[S3 Access]
-    E --> F[Simulated Sensitive Data Access]
-    F --> G[CloudTrail Evidence]
-    G --> H[Investigation]
-    H --> I[Containment]
-    I --> J[Session Revocation]
-    J --> K[Post-Revocation Access Denied]
-    K --> L[Recovery and Restoration]
-    L --> M[Final Validation]
+## Visual Attack Path
 
-```
-Attack Chain Summary
-Attacker authenticated as the aws-attack-chain-lab-attacker IAM user.
-Attacker assumed the deliberately vulnerable IAM role.
-Temporary STS credentials were issued.
-The compromised role accessed the vulnerable S3 bucket.
-Simulated sensitive data was retrieved.
-CloudTrail recorded the attack activity.
-CloudTrail evidence was investigated.
-The compromised access path was contained.
-Existing sessions were revoked.
-Post-revocation testing confirmed access was denied.
-Lab permissions were restored.
-Final validation confirmed legitimate access was restored.
-Evidence
-incident-timeline.md
-cloudtrail-forensics.md
-containment-validation.md
-evidence/attack-path-summary.md
-evidence/exfiltration/sensitive-data-recovered-final.txt
-evidence/cloudtrail/
+![AWS Attack Chain Diagram](images/aws-attack-chain-diagram.png)
+
+---
+
+## Attack Chain Summary
+
+1. Attacker authenticated as the `aws-attack-chain-lab-attacker` IAM user.
+2. The attacker assumed the deliberately vulnerable IAM role.
+3. Temporary STS credentials were issued.
+4. The compromised role accessed the vulnerable S3 bucket.
+5. Simulated sensitive data was retrieved.
+6. AWS CloudTrail recorded the attack activity.
+7. CloudTrail evidence was investigated.
+8. The compromised access path was contained.
+9. Existing sessions were revoked.
+10. Post-revocation testing confirmed access was denied.
+11. Lab permissions were restored.
+12. Final validation confirmed legitimate access was restored.
+
+---
+
+## Evidence
+
+- `incident-timeline.md`
+- `cloudtrail-forensics.md`
+- `containment-validation.md`
+- `evidence/attack-path-summary.md`
+- `evidence/exfiltration/sensitive-data-recovered-final.txt`
+- `evidence/cloudtrail/`
