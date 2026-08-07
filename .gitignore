@@ -6,3 +6,9 @@
 *.tfvars.json
 .env
 .aws/
+
+# Terraform plan files
+*.plan
+
+# Simulated recovered data artifacts
+sensitive-data-recovered*.txt
