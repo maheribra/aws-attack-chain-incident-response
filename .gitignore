@@ -10,5 +10,6 @@
 # Terraform plan files
 *.plan
 
-# Simulated recovered data artifacts
+# Simulated attack artifacts
+sensitive-data.txt
 sensitive-data-recovered*.txt
