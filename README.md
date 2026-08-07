@@ -7,11 +7,41 @@
 ![Prowler](https://img.shields.io/badge/Prowler-Security%20Assessment-success)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
+## Project Overview
+
+| Category | Details |
+|----------|---------|
+| Project Type | AWS Cloud Security Attack Simulation & Incident Response |
+| Environment | AWS IAM, S3, STS, CloudTrail |
+| Deployment | Terraform Infrastructure as Code |
+| Attack Simulation | Pacu |
+| Investigation | CloudTrail Forensics |
+| Validation | Prowler Security Assessment |
+| Focus Areas | IAM Security, Cloud Forensics, Incident Response |
+| Data Used | Simulated sensitive data only |
+
+## Quick Results
+
+| Test | Result |
+|---|---|
+| IAM Role Assumption | Successful |
+| STS Credential Acquisition | Successful |
+| S3 Data Access | Successful |
+| CloudTrail Evidence Collection | Successful |
+| Incident Timeline Reconstruction | Successful |
+| Containment Validation | Successful |
+| Remediation Validation | Successful |
+| GuardDuty Detection | Not Available |
+| Security Hub Detection | Not Available |
+
 ## Table of Contents
 
+- [Project Overview](#project-overview)
+- [Quick Results](#quick-results)
 - [Overview](#overview)
 - [Attack Chain](#attack-chain)
 - [Architecture / Attack Path](#architecture--attack-path)
+- [Attack Chain Visualization](#attack-chain-visualization)
 - [Project Objectives](#project-objectives)
 - [Incident Response Lifecycle](#incident-response-lifecycle)
 - [Key Findings](#key-findings)
@@ -19,8 +49,10 @@
 - [Incident Response Metrics](#incident-response-metrics)
 - [Evidence](#evidence)
 - [Lessons Learned](#lessons-learned)
+- [MITRE ATT&CK Cloud Mapping](#mitre-attck-cloud-mapping)
 - [Tools and Technologies](#tools-and-technologies)
 - [Project Structure](#project-structure)
+- [Skills Demonstrated](#skills-demonstrated)
 - [Portfolio Highlights](#portfolio-highlights)
 - [Security Notice](#security-notice)
 
@@ -34,7 +66,7 @@ A vulnerable AWS environment was deployed using Terraform and subjected to an au
 
 The environment was then investigated using AWS CloudTrail evidence, contained, remediated, and validated.
 
-The project intentionally documents both **successful security controls** and **detection gaps**. CloudTrail provided confirmed forensic evidence of the attack, while GuardDuty and Security Hub were verified as inactive in the lab account and therefore did not generate findings.
+The project intentionally documents both **successful security controls** and **detection gaps**. CloudTrail provided confirmed forensic evidence of the attack, while GuardDuty and Security Hub were assessed during the exercise and were not enabled at the time of testing and therefore did not generate findings.
 
 ---
 
@@ -165,6 +197,16 @@ The laboratory was designed around a deliberately vulnerable AWS environment con
 The complete investigation and evidence are documented in:
 
 * `04-investigation/attack-chain-diagram.md`
+
+The architecture demonstrates the complete incident lifecycle:
+
+1. Vulnerable AWS configuration
+2. Authorized attacker activity
+3. IAM role compromise
+4. S3 data access
+5. CloudTrail forensic investigation
+6. Containment and remediation
+7. Security validation
 
 ---
 
@@ -427,6 +469,19 @@ Post-remediation validation confirms whether the environment has actually return
 
 ---
 
+## MITRE ATT&CK Cloud Mapping
+
+| Attack Activity | Technique |
+|---|---|
+| Compromised IAM credentials | T1078 - Valid Accounts |
+| IAM Role Assumption | T1078.004 - Valid Accounts: Cloud Accounts |
+| IAM Enumeration | T1087.004 - Account Discovery: Cloud Account |
+| Cloud Resource Discovery | T1526 - Cloud Service Discovery |
+| S3 Data Access | T1530 - Data from Cloud Storage |
+| Temporary Credential Usage | T1552.005 - Credentials from Web Browsers / Cloud Credential Exposure |
+
+---
+
 ## Tools and Technologies
 
 ### AWS Services
@@ -474,6 +529,25 @@ aws-attack-chain-incident-response/
 ├── metrics.md
 └── README.md
 ```
+
+---
+
+## Skills Demonstrated
+
+- AWS IAM Security
+- IAM Role Trust Policy Analysis
+- Least Privilege Implementation
+- AWS STS Temporary Credentials
+- Amazon S3 Security
+- CloudTrail Log Analysis
+- Cloud Incident Response
+- Cloud Forensics
+- Attack Path Analysis
+- Privilege Escalation Analysis
+- Security Control Validation
+- Terraform Infrastructure as Code
+- Python Security Automation
+- AWS Security Tooling
 
 ---
 
