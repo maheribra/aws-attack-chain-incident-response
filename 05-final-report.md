@@ -126,7 +126,17 @@ The exercise demonstrated several key security lessons:
 6. Security validation should occur after remediation to confirm that controls are effective.
 7. Attack simulation and defensive investigation should be tested together to validate the complete incident-response process.
 
-## 12. Evidence
+## 12. MITRE ATT&CK Mapping
+
+| Attack Stage | MITRE Technique |
+|--------------|-----------------|
+| Role Assumption | T1078 – Valid Accounts |
+| IAM Enumeration | T1087 – Account Discovery |
+| S3 Enumeration | T1083 – File and Directory Discovery |
+| Data Access | T1530 – Data from Cloud Storage |
+| Temporary Credentials | T1528 – Steal Application Access Token (temporary cloud credentials) |
+
+## 13. Evidence
 
 The project contains evidence covering the complete attack and incident-response lifecycle.
 
@@ -187,6 +197,24 @@ Final Project Documentation
 - `05-final-report.md`
 
 This report consolidates the attack, investigation, detection assessment, containment, remediation, recovery, validation, findings, metrics, and lessons learned.
+
+## Skills Demonstrated
+
+- AWS IAM
+- AWS STS
+- Amazon S3
+- AWS CloudTrail
+- AWS GuardDuty
+- AWS Security Hub
+- Terraform
+- Incident Response
+- Cloud Forensics
+- IAM Policy Analysis
+- Least Privilege
+- Evidence Preservation
+- Attack Simulation
+- Threat Detection
+- Security Validation
 
 ## Conclusion
 
